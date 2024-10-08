@@ -1,4 +1,4 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer :0 (sus) " ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer :0 (skibid) " ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 local GameName = "custom ability - by nexer"
 
@@ -81,23 +81,23 @@ Scripts:AddToggle({
 	Callback = function(Value)
 Sprint = Value
 while Sprint == true do
-_G.Animation = 15775758181
-if game.ReplicatedStorage:FindFirstChild("Animation") == nil then
-local Anim = Instance.new("Animation")
-Anim.AnimationId = "rbxassetid://".._G.Animation
-Anim.Name = "Animation"
+_G.Animation2 = 15775758181
+if game.ReplicatedStorage:FindFirstChild("Animation2") == nil then
+local Anim = Instance.new("Animation2")
+Anim.AnimationId = "rbxassetid://".._G.Animation2
+Anim.Name = "Animation2"
 Anim.Parent = game.ReplicatedStorage
-elseif game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
-game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation
+elseif game.ReplicatedStorage:FindFirstChild("Animation2") ~= nil then
+game.ReplicatedStorage:FindFirstChild("Animation2").AnimationId = "rbxassetid://".._G.Animation2
 end
 wait(0.5)
-if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
-game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
+if game.ReplicatedStorage:FindFirstChild("Animation2") ~= nil then
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation2, game.Players.LocalPlayer.Character.Humanoid):Play()
 end
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
 end
 while Sprint == false do
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation, game.Players.LocalPlayer.Character.Humanoid):Stop()
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation2, game.Players.LocalPlayer.Character.Humanoid):Stop()
 	 end
 })
