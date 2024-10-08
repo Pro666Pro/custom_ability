@@ -96,8 +96,10 @@ game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage
 end
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
 end
+end
 while Sprint == false do
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation2, game.Players.LocalPlayer.Character.Humanoid):Stop()
+end
 	 end
 })
