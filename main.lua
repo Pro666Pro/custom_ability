@@ -1,4 +1,4 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer :<" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer :0 (WIP) " ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 local GameName = "custom ability - by nexer"
 
@@ -51,49 +51,154 @@ Scripts:AddButton({
 	Name = "Summon",
 	Callback = function()
 game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets.Thor.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
-wait(0.45)
+wait(0.75)
 game:GetService("ReplicatedStorage").NullAbility:FireServer()
 	 end
 })
 
 Scripts:AddButton({
-	Name = "Double Jump",
+	Name = "Test",
 	Callback = function()
-_G.Animation2 = 15938993207
+_G.Animation = 18526391457
 if game.ReplicatedStorage:FindFirstChild("Animation") == nil then
 local Anim = Instance.new("Animation")
-Anim.AnimationId = "rbxassetid://".._G.Animation2
+Anim.AnimationId = "rbxassetid://".._G.Animation
 Anim.Name = "Animation"
 Anim.Parent = game.ReplicatedStorage
 elseif game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
-game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation2
+game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation
 end
 wait(0.5)
 if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
 game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
 end
 wait(0.45)
-game:GetService("ReplicatedStorage").RetroAbility:FireServer("Bomb")
+game:GetService("ReplicatedStorage").RetroAbility:FireServer("Ban Hammer")
 	 end
 })
 
 Scripts:AddButton({
-	Name = "Dash",
+	Name = "Test 2",
 	Callback = function()
-_G.Animation3 = 15938993207
+_G.Animation = 17516436450
 if game.ReplicatedStorage:FindFirstChild("Animation") == nil then
 local Anim = Instance.new("Animation")
-Anim.AnimationId = "rbxassetid://".._G.Animation3
+Anim.AnimationId = "rbxassetid://".._G.Animation
 Anim.Name = "Animation"
 Anim.Parent = game.ReplicatedStorage
 elseif game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
-game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation3
+game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation
 end
 wait(0.5)
 if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
 game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
 end
 wait(0.45)
-Character:PivotTo(Character:GetPivot() * CFrame.new(0, 0, -5))
+game:GetService("ReplicatedStorage").RetroAbility:FireServer("Ban Hammer")
+	 end
+})
+
+Scripts:AddButton({
+	Name = "Test 3",
+	Callback = function()
+_G.Animation = 180426354
+if game.ReplicatedStorage:FindFirstChild("Animation") == nil then
+local Anim = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://".._G.Animation
+Anim.Name = "Animation"
+Anim.Parent = game.ReplicatedStorage
+elseif game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
+game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation
+end
+wait(0.5)
+if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
+end
+wait(0.45)
+game:GetService("ReplicatedStorage").RetroAbility:FireServer("Ban Hammer")
+	 end
+})
+
+Scripts:AddButton({
+	Name = "Test 4",
+	Callback = function()
+_G.Animation = 18470515894
+if game.ReplicatedStorage:FindFirstChild("Animation") == nil then
+local Anim = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://".._G.Animation
+Anim.Name = "Animation"
+Anim.Parent = game.ReplicatedStorage
+elseif game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
+game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation
+end
+wait(0.5)
+if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
+end
+wait(0.45)
+game:GetService("ReplicatedStorage").RetroAbility:FireServer("Ban Hammer")
+	 end
+})
+
+Scripts:AddButton({
+	Name = "Test 5",
+	Callback = function()
+_G.Animation = 16144868064
+if game.ReplicatedStorage:FindFirstChild("Animation") == nil then
+local Anim = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://".._G.Animation
+Anim.Name = "Animation"
+Anim.Parent = game.ReplicatedStorage
+elseif game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
+game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation
+end
+wait(0.5)
+if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
+end
+wait(0.45)
+game:GetService("ReplicatedStorage").RetroAbility:FireServer("Ban Hammer")
+	 end
+})
+
+Scripts:AddButton({
+	Name = "Test 6",
+	Callback = function()
+_G.Animation = 13675136513
+if game.ReplicatedStorage:FindFirstChild("Animation") == nil then
+local Anim = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://".._G.Animation
+Anim.Name = "Animation"
+Anim.Parent = game.ReplicatedStorage
+elseif game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
+game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation
+end
+wait(0.5)
+if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
+end
+wait(0.45)
+game:GetService("ReplicatedStorage").RetroAbility:FireServer("Ban Hammer")
+	 end
+})
+
+Scripts:AddButton({
+	Name = "Test 7",
+	Callback = function()
+_G.Animation = 18526445077
+if game.ReplicatedStorage:FindFirstChild("Animation") == nil then
+local Anim = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://".._G.Animation
+Anim.Name = "Animation"
+Anim.Parent = game.ReplicatedStorage
+elseif game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
+game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation
+end
+wait(0.5)
+if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
+end
+wait(0.45)
+game:GetService("ReplicatedStorage").RetroAbility:FireServer("Ban Hammer")
 	 end
 })
