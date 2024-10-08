@@ -39,8 +39,21 @@ Scripts:AddButton({
 	Name = "Explosive Jump",
 	Callback = function()
 game:GetService("ReplicatedStorage").RetroAbility:FireServer("Bomb")
-game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets.Ice Skate.SkateJump, game.Players.LocalPlayer.Character.Humanoid):Play()
-	 end
+_G.Animation = 15775787411
+if game.ReplicatedStorage:FindFirstChild("Animation") == nil then
+local Anim = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://".._G.Animation
+Anim.Name = "Animation"
+Anim.Parent = game.ReplicatedStorage
+elseif game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
+game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation
+end
+wait(0.5)
+if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
+end
+end
+	end
 })
 
 Scripts:AddButton({
@@ -58,13 +71,27 @@ Scripts:AddButton({
 	Name = "Sprint",
 	Callback = function()
 if _G.Sprint == false then
-game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets.Ice Skate.SkateLoop, game.Players.LocalPlayer.Character.Humanoid):Play()
+_G.Animation2 = 15775758181
+if game.ReplicatedStorage:FindFirstChild("Animation2") == nil then
+local Anim = Instance.new("Animation2")
+Anim.AnimationId = "rbxassetid://".._G.Animation2
+Anim.Name = "Animation2"
+Anim.Parent = game.ReplicatedStorage
+elseif game.ReplicatedStorage:FindFirstChild("Animation2") ~= nil then
+game.ReplicatedStorage:FindFirstChild("Animation2").AnimationId = "rbxassetid://".._G.Animation2
+end
+wait(0.5)
+if game.ReplicatedStorage:FindFirstChild("Animation2") ~= nil then
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation2, game.Players.LocalPlayer.Character.Humanoid):Play()
+end
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+end
+end
 _G.Sprint = true
 end
 elseif _G.Sprint == true then
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets.Ice Skate.SkateLoop, game.Players.LocalPlayer.Character.Humanoid):Stop()
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation2, game.Players.LocalPlayer.Character.Humanoid):Stop()
 _G.Sprint = false
 end
 	 end
