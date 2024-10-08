@@ -71,7 +71,7 @@ TextButton_2.Parent = Frame
 TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_2.BorderSizePixel = 0
-TextButton_2.Position = UDim2.new(0.043333333, 0, 0.0873415098, 0)
+TextButton_2.Position = UDim2.new(0.063333333, 0, 0.0873415098, 0)
 TextButton_2.Size = UDim2.new(0, 50, 0, 50)
 TextButton_2.Font = Enum.Font.SourceSans
 TextButton_2.Text = "Stomp"
@@ -90,7 +90,7 @@ TextButton_3.Parent = Frame
 TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_3.BorderSizePixel = 0
-TextButton_3.Position = UDim2.new(0.043333333, 0, 0.140828863, 0)
+TextButton_3.Position = UDim2.new(0.083333333, 0, 0.140828863, 0)
 TextButton_3.Size = UDim2.new(0, 50, 0, 50)
 TextButton_3.Font = Enum.Font.SourceSans
 TextButton_3.Text = "Explosive Jump"
@@ -108,7 +108,7 @@ TextButton_4.Parent = Frame
 TextButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_4.BorderSizePixel = 0
-TextButton_4.Position = UDim2.new(0.043333333, 0, 0.194316208, 0)
+TextButton_4.Position = UDim2.new(0.123333333, 0, 0.194316208, 0)
 TextButton_4.Size = UDim2.new(0, 50, 0, 50)
 TextButton_4.Font = Enum.Font.SourceSans
 TextButton_4.Text = "Summon [PATCHED]"
@@ -118,16 +118,19 @@ TextButton_4.TextSize = 14.000
 TextButton_4.TextWrapped = true
 TextButton_4.Draggable = true
 TextButton_4.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 	game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets.Thor.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
 	wait(0.5)
 	game:GetService("ReplicatedStorage").NullAbility:FireServer()
+	wait(3)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 end)
 
 TextButton_6.Parent = Frame
 TextButton_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_6.BorderSizePixel = 0
-TextButton_6.Position = UDim2.new(0.043333333, 0, 0.301109046, 0)
+TextButton_6.Position = UDim2.new(0.1643333333, 0, 0.301109046, 0)
 TextButton_6.Size = UDim2.new(0, 50, 0, 50)
 TextButton_6.Font = Enum.Font.SourceSans
 TextButton_6.Text = "Sonic Mode"
@@ -161,3 +164,7 @@ _G.SonicMode = false
 _G.SlapAura = false
 end
 end)
+
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Script by Nexer" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "OK"})
+setclipboard(tostring("https://www.youtube.com/@nexer1234"))
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Copied Youtube Channel Link" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "OK"})
