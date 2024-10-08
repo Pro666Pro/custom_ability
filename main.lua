@@ -1,4 +1,4 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer <:" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer :<" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 local GameName = "custom ability - by nexer"
 
@@ -66,7 +66,7 @@ Anim.AnimationId = "rbxassetid://".._G.Animation2
 Anim.Name = "Animation"
 Anim.Parent = game.ReplicatedStorage
 elseif game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
-game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation
+game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation2
 end
 wait(0.5)
 if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
@@ -87,7 +87,7 @@ Anim.AnimationId = "rbxassetid://".._G.Animation3
 Anim.Name = "Animation"
 Anim.Parent = game.ReplicatedStorage
 elseif game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
-game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation
+game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation3
 end
 wait(0.5)
 if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
