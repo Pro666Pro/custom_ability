@@ -1,4 +1,3 @@
-
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Loading",Text = "Script Loading :-0",Icon = "rbxassetid://7733658504",Duration = 5})
 
 local bypass;
@@ -72,7 +71,7 @@ TextButton_2.Parent = Frame
 TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_2.BorderSizePixel = 0
-TextButton_2.Position = UDim2.new(51, 51, 51, 51)
+TextButton_2.Position = UDim2.new(51, 51, 51, 1)
 TextButton_2.Size = UDim2.new(0, 50, 0, 50)
 TextButton_2.Font = Enum.Font.SourceSans
 TextButton_2.Text = "Stomp"
@@ -91,7 +90,7 @@ TextButton_3.Parent = Frame
 TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_3.BorderSizePixel = 0
-TextButton_3.Position = UDim2.new(101, 101, 101, 101)
+TextButton_3.Position = UDim2.new(101, 101, 101, 1)
 TextButton_3.Size = UDim2.new(0, 50, 0, 50)
 TextButton_3.Font = Enum.Font.SourceSans
 TextButton_3.Text = "Explosive Jump"
@@ -109,7 +108,7 @@ TextButton_4.Parent = Frame
 TextButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_4.BorderSizePixel = 0
-TextButton_4.Position = UDim2.new(151, 151, 151, 151)
+TextButton_4.Position = UDim2.new(151, 151, 151, 1)
 TextButton_4.Size = UDim2.new(0, 50, 0, 50)
 TextButton_4.Font = Enum.Font.SourceSans
 TextButton_4.Text = "Summon [PATCHED]"
@@ -131,7 +130,7 @@ TextButton_6.Parent = Frame
 TextButton_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_6.BorderSizePixel = 0
-TextButton_6.Position = UDim2.new(201, 201, 201, 201)
+TextButton_6.Position = UDim2.new(201, 201, 201, 1)
 TextButton_6.Size = UDim2.new(0, 50, 0, 50)
 TextButton_6.Font = Enum.Font.SourceSans
 TextButton_6.Text = "Sonic Mode"
@@ -145,6 +144,7 @@ if _G.SonicMode == false then
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
 _G.SonicMode = true
 _G.SlapAura = true
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Slap Aura Turned On",Icon = "rbxassetid://7733658504",Duration = 5})
 while _G.SonicMode == true do
 game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets["64"].anims.doublejump, game.Players.LocalPlayer.Character.Humanoid):Play()
 wait(0.3)
@@ -163,6 +163,7 @@ else
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
 _G.SonicMode = false
 _G.SlapAura = false
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Slap Aura Turned Off",Icon = "rbxassetid://7733658504",Duration = 5})
 end
 end)
 
