@@ -1,4 +1,4 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer :o" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer <:" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 local GameName = "custom ability - by nexer"
 
@@ -59,10 +59,10 @@ game:GetService("ReplicatedStorage").NullAbility:FireServer()
 Scripts:AddButton({
 	Name = "Double Jump",
 	Callback = function()
-_G.Animation = 15938993207
+_G.Animation2 = 15938993207
 if game.ReplicatedStorage:FindFirstChild("Animation") == nil then
 local Anim = Instance.new("Animation")
-Anim.AnimationId = "rbxassetid://".._G.Animation
+Anim.AnimationId = "rbxassetid://".._G.Animation2
 Anim.Name = "Animation"
 Anim.Parent = game.ReplicatedStorage
 elseif game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
@@ -80,10 +80,10 @@ game:GetService("ReplicatedStorage").RetroAbility:FireServer("Bomb")
 Scripts:AddButton({
 	Name = "Dash",
 	Callback = function()
-_G.Animation = 15938993207
+_G.Animation3 = 15938993207
 if game.ReplicatedStorage:FindFirstChild("Animation") == nil then
 local Anim = Instance.new("Animation")
-Anim.AnimationId = "rbxassetid://".._G.Animation
+Anim.AnimationId = "rbxassetid://".._G.Animation3
 Anim.Name = "Animation"
 Anim.Parent = game.ReplicatedStorage
 elseif game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
