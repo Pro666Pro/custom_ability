@@ -75,3 +75,29 @@ wait(0.75)
 game:GetService("ReplicatedStorage").NullAbility:FireServer()
 	 end
 })
+
+Scripts:AddToggle({
+	Name = "Sprint",
+	Callback = function(Value)
+Sprint = Value
+while Sprint == true do
+_G.Animation = 15775758181
+if game.ReplicatedStorage:FindFirstChild("Animation") == nil then
+local Anim = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://".._G.Animation
+Anim.Name = "Animation"
+Anim.Parent = game.ReplicatedStorage
+elseif game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
+game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation
+end
+wait(0.5)
+if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
+end
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+end
+while Sprint == false do
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation, game.Players.LocalPlayer.Character.Humanoid):Stop()
+	 end
+})
