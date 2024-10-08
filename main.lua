@@ -51,7 +51,6 @@ Scripts:AddButton({
 	Name = "Double Jump",
 	Callback = function()
 game:GetService("ReplicatedStorage").RetroAbility:FireServer("Bomb")
-wait(0.3)
 _G.Animation = 15775787411
 if game.ReplicatedStorage:FindFirstChild("Animation") == nil then
 local Anim = Instance.new("Animation")
