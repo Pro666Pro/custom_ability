@@ -21,7 +21,7 @@ Scripts:AddButton({
 	Name = "Rocket Shoot",
 	Callback = function()
 game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets.Hitman.RevolverAnim, game.Players.LocalPlayer.Character.Humanoid):Play()
-wait(0.45)
+wait(0.4)
 game:GetService("ReplicatedStorage").RetroAbility:FireServer("Rocket Launcher")
 	 end
 })
@@ -30,7 +30,7 @@ Scripts:AddButton({
 	Name = "Stomp",
 	Callback = function()
 game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets.Titan.Stomp, game.Players.LocalPlayer.Character.Humanoid):Play()
-wait(0.45)
+wait(0.4)
 game:GetService("ReplicatedStorage").RetroAbility:FireServer("Ban Hammer")
 	 end
 })
@@ -47,7 +47,7 @@ Scripts:AddButton({
 	Name = "Summon",
 	Callback = function()
 game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets.Thor.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
-wait(0.75)
+wait(0.5)
 game:GetService("ReplicatedStorage").NullAbility:FireServer()
 	 end
 })
@@ -61,8 +61,7 @@ if _G.Sprint == false then
 game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets["Ice Skate"].SkateLoop, game.Players.LocalPlayer.Character.Humanoid):Play()
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
 _G.Sprint = true
-end
-elseif _G.Sprint == true then
+else
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets["Ice Skate"].SkateLoop, game.Players.LocalPlayer.Character.Humanoid):Stop()
 _G.Sprint = false
