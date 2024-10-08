@@ -1,4 +1,4 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Loading",Text = "Script Loading :\",Icon = "rbxassetid://7733658504",Duration = 5})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Loading",Text = "Script Loading :0",Icon = "rbxassetid://7733658504",Duration = 5})
 
 local bypass;
     bypass = hookmetamethod(game, "__namecall", function(method, ...) 
@@ -52,7 +52,7 @@ TextButton.Parent = Frame
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.043333333, 0, 0.0338541679, 0)
+TextButton.Position = UDim2.new(1, 0, 1, 0)
 TextButton.Size = UDim2.new(0, 50, 0, 50)
 TextButton.Font = Enum.Font.SourceSans
 TextButton.Text = "Rocket Shoot"
@@ -71,7 +71,7 @@ TextButton_2.Parent = Frame
 TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_2.BorderSizePixel = 0
-TextButton_2.Position = UDim2.new(0.063333333, 0, 0.0873415098, 0)
+TextButton_2.Position = UDim2.new(51, 0, 51, 0)
 TextButton_2.Size = UDim2.new(0, 50, 0, 50)
 TextButton_2.Font = Enum.Font.SourceSans
 TextButton_2.Text = "Stomp"
@@ -90,7 +90,7 @@ TextButton_3.Parent = Frame
 TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_3.BorderSizePixel = 0
-TextButton_3.Position = UDim2.new(0.083333333, 0, 0.140828863, 0)
+TextButton_3.Position = UDim2.new(101, 0, 101, 0)
 TextButton_3.Size = UDim2.new(0, 50, 0, 50)
 TextButton_3.Font = Enum.Font.SourceSans
 TextButton_3.Text = "Explosive Jump"
@@ -108,7 +108,7 @@ TextButton_4.Parent = Frame
 TextButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_4.BorderSizePixel = 0
-TextButton_4.Position = UDim2.new(0.123333333, 0, 0.194316208, 0)
+TextButton_4.Position = UDim2.new(151, 0, 151, 0)
 TextButton_4.Size = UDim2.new(0, 50, 0, 50)
 TextButton_4.Font = Enum.Font.SourceSans
 TextButton_4.Text = "Summon [PATCHED]"
@@ -130,7 +130,7 @@ TextButton_6.Parent = Frame
 TextButton_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_6.BorderSizePixel = 0
-TextButton_6.Position = UDim2.new(0.1643333333, 0, 0.301109046, 0)
+TextButton_6.Position = UDim2.new(201, 0, 201, 0)
 TextButton_6.Size = UDim2.new(0, 50, 0, 50)
 TextButton_6.Font = Enum.Font.SourceSans
 TextButton_6.Text = "Sonic Mode"
