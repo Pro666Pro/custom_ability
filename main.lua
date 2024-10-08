@@ -1,4 +1,4 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error :(",Text = "Loading...",Icon = "rbxassetid://7733658504",Duration = 5})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Loading",Text = "Loading...",Icon = "rbxassetid://7733658504",Duration = 5})
 
 local bypass;
     bypass = hookmetamethod(game, "__namecall", function(method, ...) 
