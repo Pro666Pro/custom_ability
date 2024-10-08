@@ -1,4 +1,4 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer :0 (skibidi) " ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer :0 (sus) " ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 local GameName = "custom ability - by nexer"
 
@@ -68,41 +68,11 @@ end
 	 end
 })
 
-
 Scripts:AddButton({
 	Name = "Summon",
 	Callback = function()
 game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets.Thor.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
 wait(0.75)
 game:GetService("ReplicatedStorage").NullAbility:FireServer()
-	 end
-})
-
-Scripts:AddToggle({
-	Name = "Sprint",
-	Callback = function(Value)
-_G.Sprint = Value
-if _G.Sprint == true do
-_G.SprintAnim = 15775758181
-if game.ReplicatedStorage:FindFirstChild("SprintAnimation") == nil then
-local SprintAnim = Instance.new("SprintAnimation")
-SprintAnim.AnimationId = "rbxassetid://".._G.SprintAnim
-SprintAnim.Name = "SprintAnimation"
-SprintAnim.Parent = game.ReplicatedStorage
-elseif game.ReplicatedStorage:FindFirstChild("SprintAnimation") ~= nil then
-game.ReplicatedStorage:FindFirstChild("SprintAnimation").AnimationId = "rbxassetid://".._G.SprintAnim
-end
-wait(0.5)
-if game.ReplicatedStorage:FindFirstChild("SprintAnimation") ~= nil then
-game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.SprintAnimation, game.Players.LocalPlayer.Character.Humanoid):Play()
-end
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
-until _G.Sprint == false
-elseif _G.Sprint == false then
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
-game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.SprintAnimation, game.Players.LocalPlayer.Character.Humanoid):Stop()
-end
-end
 	 end
 })
