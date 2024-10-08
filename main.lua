@@ -1,4 +1,4 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer (no rizz?) " ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer1234" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 local GameName = "custom ability - by nexer"
 
