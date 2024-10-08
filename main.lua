@@ -1,4 +1,4 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Loading",Text = "Script Loading",Icon = "rbxassetid://7733658504",Duration = 5})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Loading",Text = "Script Loading :\",Icon = "rbxassetid://7733658504",Duration = 5})
 
 local bypass;
     bypass = hookmetamethod(game, "__namecall", function(method, ...) 
@@ -153,7 +153,7 @@ while wait() do
        if isSpawned(v) and v ~= game.Players.LocalPlayer and not v.Character.Head:FindFirstChild("UnoReverseCard") and _G.SlapAura == true then
            if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 and _G.SlapAura == true then
                game:GetService("ReplicatedStorage").b:FireServer(v.Character["Right Arm"])
-               wait(0.2)
+               wait(1.5)
            end
        end
    end
