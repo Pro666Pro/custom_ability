@@ -1,4 +1,4 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer1234(skibidi64sus)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer1234(64)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 local GameName = "custom ability - by nexer"
 
@@ -96,13 +96,13 @@ Scripts:AddButton({
 if _G.SonicMode == false then
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
 _G.SonicMode = true
+while _G.SonicMode == true do
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets["64"].anims.doublejump, game.Players.LocalPlayer.Character.Humanoid):Play()
+wait(0.3)
+end
 else
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
 _G.SonicMode = false
 end
 	 end
 })
-
-while _G.SonicMode == true do
-game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets["64"].anims.doublejump, game.Players.LocalPlayer.Character.Humanoid):Play()
-end
