@@ -1,3 +1,5 @@
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+
 local GameName = "custom ability - by nexer"
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
@@ -19,7 +21,7 @@ Scripts:AddButton({
 	Name = "Rocket Throw",
 	Callback = function()
 game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets.Hitman.RevolverAnim, game.Players.LocalPlayer.Character.Humanoid):Play()
-wait(0.5)
+wait(0.45)
 game:GetService("ReplicatedStorage").RetroAbility:FireServer("Rocket Launcher")
 	 end
 })
@@ -40,7 +42,7 @@ wait(0.5)
 if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
 game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
 end
-wait(0.5)
+wait(0.45)
 game:GetService("ReplicatedStorage").RetroAbility:FireServer("Ban Hammer")
 	 end
 })
