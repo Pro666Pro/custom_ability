@@ -1,4 +1,4 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer :>" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer :o" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 local GameName = "custom ability - by nexer"
 
@@ -94,7 +94,6 @@ if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
 game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
 end
 wait(0.45)
-local plyrCam = game:GetService("Workspace").CurrentCamera
-hrp.Position = plyrCam.CFrame.LookVector * 10
+Character:PivotTo(Character:GetPivot() * CFrame.new(0, 0, -5))
 	 end
 })
