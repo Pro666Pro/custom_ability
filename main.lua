@@ -48,7 +48,7 @@ game:GetService("ReplicatedStorage").RetroAbility:FireServer("Ban Hammer")
 })
 
 Scripts:AddButton({
-	Name = "Double Jump",
+	Name = "Explosive Jump",
 	Callback = function()
 game:GetService("ReplicatedStorage").RetroAbility:FireServer("Bomb")
 _G.Animation = 15775787411
