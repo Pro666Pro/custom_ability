@@ -1,4 +1,12 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer1234(64)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+function isSpawned(player)
+   if workspace:FindFirstChild(player.Name) and player.Character:FindFirstChild("HumanoidRootPart") then
+       return true
+   else
+       return false
+   end
+end
+
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer1234(SonicUpdate)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 local GameName = "custom ability - by nexer"
 
@@ -54,6 +62,7 @@ game:GetService("ReplicatedStorage").NullAbility:FireServer()
 
 _G.Sprint = false
 _G.SonicMode = false
+_G.SlapAura = false
 
 Scripts:AddButton({
 	Name = "Sprint",
@@ -96,13 +105,25 @@ Scripts:AddButton({
 if _G.SonicMode == false then
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
 _G.SonicMode = true
+_G.SlapAura = true
 while _G.SonicMode == true do
 game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets["64"].anims.doublejump, game.Players.LocalPlayer.Character.Humanoid):Play()
 wait(0.3)
 end
+while wait() do
+   for i, v in pairs(game.Players:GetPlayers()) do
+       if isSpawned(v) and v ~= game.Players.LocalPlayer and not v.Character.Head:FindFirstChild("UnoReverseCard") and _G.SlapAura == true then
+           if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 and _G.SlapAura == true then
+               game:GetService("ReplicatedStorage").b:FireServer(v.Character["Right Arm"])
+               wait(0.1)
+           end
+       end
+   end
+end
 else
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
 _G.SonicMode = false
+_G.SlapAura = false
 end
 	 end
 })
