@@ -123,36 +123,6 @@ TextButton_4.MouseButton1Click:Connect(function()
 	game:GetService("ReplicatedStorage").NullAbility:FireServer()
 end)
 
-TextButton_5.Parent = Frame
-TextButton_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_5.BorderSizePixel = 0
-TextButton_5.Position = UDim2.new(0.043333333, 0, 0.247712597, 0)
-TextButton_5.Size = UDim2.new(0, 50, 0, 50)
-TextButton_5.Font = Enum.Font.SourceSans
-TextButton_5.Text = "Sprint [Buggy]"
-TextButton_5.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_5.TextScaled = true
-TextButton_5.TextSize = 14.000
-TextButton_5.TextWrapped = true
-TextButton_5.Draggable = true
-TextButton_5.MouseButton1Click:Connect(function()
-	if _G.Sprint == false then
-	game:GetService("ReplicatedStorage").RetroAbility:FireServer("Bomb")
-	game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets["Ice Skate"].SkateJump, game.Players.LocalPlayer.Character.Humanoid):Play()
-	wait(1)
-	game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets["Ice Skate"].SkateLoop, game.Players.LocalPlayer.Character.Humanoid):Play()
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
-	_G.Sprint = true
-	else
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
-	game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets["Ice Skate"].SkateLoop, game.Players.LocalPlayer.Character.Humanoid):Stop()
-	game:GetService("ReplicatedStorage").RetroAbility:FireServer("Bomb")
-	game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets["Ice Skate"].SkateJump, game.Players.LocalPlayer.Character.Humanoid):Play()
-	_G.Sprint = false
-	end
-end)
-
 TextButton_6.Parent = Frame
 TextButton_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
