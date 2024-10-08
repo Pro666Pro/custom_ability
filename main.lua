@@ -60,21 +60,27 @@ Scripts:AddToggle({
 	Name = "Sprint",
 	Callback = function(Value)
 _G.Sprint = Value
-if _G.Sprint == true then
-_G.Animation = 15775758181
-if game.ReplicatedStorage:FindFirstChild("Animation") == nil then
-local Anim = Instance.new("Animation")
-Anim.AnimationId = "rbxassetid://".._G.Animation
-Anim.Name = "Animation"
-Anim.Parent = game.ReplicatedStorage
-elseif game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
-game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation
+if _G.Sprint == true do
+_G.SprintAnim = 15775758181
+if game.ReplicatedStorage:FindFirstChild("SprintAnimation") == nil then
+local SprintAnim = Instance.new("SprintAnimation")
+SprintAnim.AnimationId = "rbxassetid://".._G.SprintAnim
+SprintAnim.Name = "SprintAnimation"
+SprintAnim.Parent = game.ReplicatedStorage
+elseif game.ReplicatedStorage:FindFirstChild("SprintAnimation") ~= nil then
+game.ReplicatedStorage:FindFirstChild("SprintAnimation").AnimationId = "rbxassetid://".._G.SprintAnim
 end
 wait(0.5)
-if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
-game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
+if game.ReplicatedStorage:FindFirstChild("SprintAnimation") ~= nil then
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.SprintAnimation, game.Players.LocalPlayer.Character.Humanoid):Play()
 end
-wait(0.45)
-
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+until _G.Sprint == false
+elseif _G.Sprint == false then
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.SprintAnimation, game.Players.LocalPlayer.Character.Humanoid):Stop()
+end
+end
 	 end
 })
