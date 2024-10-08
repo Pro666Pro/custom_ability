@@ -29,19 +29,7 @@ game:GetService("ReplicatedStorage").RetroAbility:FireServer("Rocket Launcher")
 Scripts:AddButton({
 	Name = "Stomp",
 	Callback = function()
-_G.Animation = 16102767550
-if game.ReplicatedStorage:FindFirstChild("Animation") == nil then
-local Anim = Instance.new("Animation")
-Anim.AnimationId = "rbxassetid://".._G.Animation
-Anim.Name = "Animation"
-Anim.Parent = game.ReplicatedStorage
-elseif game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
-game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation
-end
-wait(0.5)
-if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
-game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
-end
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets.Titan.Stomp, game.Players.LocalPlayer.Character.Humanoid):Play()
 wait(0.45)
 game:GetService("ReplicatedStorage").RetroAbility:FireServer("Ban Hammer")
 	 end
@@ -51,19 +39,7 @@ Scripts:AddButton({
 	Name = "Explosive Jump",
 	Callback = function()
 game:GetService("ReplicatedStorage").RetroAbility:FireServer("Bomb")
-_G.Animation = 15775787411
-if game.ReplicatedStorage:FindFirstChild("Animation") == nil then
-local Anim = Instance.new("Animation")
-Anim.AnimationId = "rbxassetid://".._G.Animation
-Anim.Name = "Animation"
-Anim.Parent = game.ReplicatedStorage
-elseif game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
-game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation
-end
-wait(0.5)
-if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
-game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
-end
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets."Ice Skate".SkateJump, game.Players.LocalPlayer.Character.Humanoid):Play()
 	 end
 })
 
@@ -76,30 +52,20 @@ game:GetService("ReplicatedStorage").NullAbility:FireServer()
 	 end
 })
 
-Scripts:AddToggle({
+_G.Sprint = false
+
+Scripts:AddButton({
 	Name = "Sprint",
-	Callback = function(Value)
-Sprint = Value
-while Sprint == true do
-_G.Animation2 = 15775758181
-if game.ReplicatedStorage:FindFirstChild("Animation2") == nil then
-local Anim = Instance.new("Animation2")
-Anim.AnimationId = "rbxassetid://".._G.Animation2
-Anim.Name = "Animation2"
-Anim.Parent = game.ReplicatedStorage
-elseif game.ReplicatedStorage:FindFirstChild("Animation2") ~= nil then
-game.ReplicatedStorage:FindFirstChild("Animation2").AnimationId = "rbxassetid://".._G.Animation2
-end
-wait(0.5)
-if game.ReplicatedStorage:FindFirstChild("Animation2") ~= nil then
-game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation2, game.Players.LocalPlayer.Character.Humanoid):Play()
-end
+	Callback = function()
+if _G.Sprint == false then
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets."Ice Skate".SkateLoop, game.Players.LocalPlayer.Character.Humanoid):Play()
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+_G.Sprint = true
 end
-end
-while Sprint == false do
+elseif _G.Sprint == true then
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation2, game.Players.LocalPlayer.Character.Humanoid):Stop()
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets."Ice Skate".SkateLoop, game.Players.LocalPlayer.Character.Humanoid):Stop()
+_G.Sprint = false
 end
 	 end
 })
