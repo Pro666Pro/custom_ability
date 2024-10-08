@@ -18,7 +18,7 @@ local Scripts = Script:AddSection({
 })
 
 Scripts:AddButton({
-	Name = "Rocket Throw",
+	Name = "Rocket Shoot",
 	Callback = function()
 game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets.Hitman.RevolverAnim, game.Players.LocalPlayer.Character.Humanoid):Play()
 wait(0.45)
@@ -46,6 +46,28 @@ wait(0.45)
 game:GetService("ReplicatedStorage").RetroAbility:FireServer("Ban Hammer")
 	 end
 })
+
+Scripts:AddButton({
+	Name = "Double Jump",
+	Callback = function()
+game:GetService("ReplicatedStorage").RetroAbility:FireServer("Bomb")
+wait(0.3)
+_G.Animation = 15775787411
+if game.ReplicatedStorage:FindFirstChild("Animation") == nil then
+local Anim = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://".._G.Animation
+Anim.Name = "Animation"
+Anim.Parent = game.ReplicatedStorage
+elseif game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
+game.ReplicatedStorage:FindFirstChild("Animation").AnimationId = "rbxassetid://".._G.Animation
+end
+wait(0.5)
+if game.ReplicatedStorage:FindFirstChild("Animation") ~= nil then
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Animation, game.Players.LocalPlayer.Character.Humanoid):Play()
+end
+	 end
+})
+
 
 Scripts:AddButton({
 	Name = "Summon",
