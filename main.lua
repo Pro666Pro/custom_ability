@@ -1,4 +1,4 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer1234(skibidiamogus)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "By Nexer1234(skibidi64sus)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 local GameName = "custom ability - by nexer"
 
@@ -53,6 +53,7 @@ game:GetService("ReplicatedStorage").NullAbility:FireServer()
 })
 
 _G.Sprint = false
+_G.SonicMode = false
 
 Scripts:AddButton({
 	Name = "Sprint",
@@ -88,3 +89,20 @@ _G.Sprint = false
 end
 	 end
 })
+
+Scripts:AddButton({
+	Name = "Sonic Mode",
+	Callback = function()
+if _G.SonicMode == false then
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+_G.SonicMode = true
+else
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+_G.SonicMode = false
+end
+	 end
+})
+
+while _G.SonicMode == true do
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets["64"].anims.doublejump, game.Players.LocalPlayer.Character.Humanoid):Play()
+end
