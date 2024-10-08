@@ -58,12 +58,18 @@ Scripts:AddButton({
 	Name = "Sprint",
 	Callback = function()
 if _G.Sprint == false then
+game:GetService("ReplicatedStorage").RetroAbility:FireServer("Bomb")
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets["Ice Skate"].SkateJump, game.Players.LocalPlayer.Character.Humanoid):Play()
+wait(1.5)
 game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets["Ice Skate"].SkateLoop, game.Players.LocalPlayer.Character.Humanoid):Play()
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
 _G.Sprint = true
 else
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets["Ice Skate"].SkateLoop, game.Players.LocalPlayer.Character.Humanoid):Stop()
+wait(0.1)
+game:GetService("ReplicatedStorage").RetroAbility:FireServer("Bomb")
+game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets["Ice Skate"].SkateJump, game.Players.LocalPlayer.Character.Humanoid):Play()
 _G.Sprint = false
 end
 	 end
