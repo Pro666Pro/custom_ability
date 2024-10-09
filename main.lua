@@ -169,4 +169,3 @@ end)
 
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Script by Nexer" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "OK"})
 setclipboard(tostring("https://www.youtube.com/@nexer1234"))
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Copied Youtube Channel Link" ,Duration = 1000, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "OK"})
